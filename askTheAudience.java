@@ -41,33 +41,33 @@ public class askTheAudience {
 	    } else if (correctAnswerLetter.equals("D")) {
 	        percentD = correctAnswerPercentage;
 	    }
-	 // Remove the correct answer letter from the options list
+	    // Remove the correct answer letter from the options list
 	    options.remove(correctAnswerLetter);
 	    
 	    // Assign remaining percentages to the other options
-        int[] remainingPercentages = {option1, option2, option3};
-        int index = 0;
+            int[] remainingPercentages = {option1, option2, option3};
+            int index = 0;
 
-        // Use while loop to assign remaining percentages to the options
-        while (!options.isEmpty()) {
-            String letter = options.remove(0); // Get the next option from the list
-            if (letter.equals("A") && percentA == 0) {
-                percentA = remainingPercentages[index];
-            } else if (letter.equals("B") && percentB == 0) {
-                percentB = remainingPercentages[index];
-            } else if (letter.equals("C") && percentC == 0) {
-                percentC = remainingPercentages[index];
-            } else if (letter.equals("D") && percentD == 0) {
-                percentD = remainingPercentages[index];
-            }
-            index++;
-        }
-	    
+            // Use while loop to assign remaining percentages to the options
+	    while (!options.isEmpty()) {
+	        String letter = options.remove(0); // Get the next option from the list
+	        if (letter.equals("A") && percentA == 0) {
+	        percentA = remainingPercentages[index];
+	        } else if (letter.equals("B") && percentB == 0) {
+	        percentB = remainingPercentages[index];
+	        } else if (letter.equals("C") && percentC == 0) {
+	        percentC = remainingPercentages[index];
+	        } else if (letter.equals("D") && percentD == 0) {
+	        percentD = remainingPercentages[index];
+	        }
+	        index++;
+	    }
+		    
 	    System.out.println("<<------Audience Votes are as follows------>>");
 	    System.out.println("A -->> " + percentA + "%");
-        System.out.println("B -->> " + percentB + "%");
-        System.out.println("C -->> " + percentC + "%");
-        System.out.println("D -->> " + percentD + "%");
+	    System.out.println("B -->> " + percentB + "%");
+            System.out.println("C -->> " + percentC + "%");
+	    System.out.println("D -->> " + percentD + "%");
 }}
 
 
