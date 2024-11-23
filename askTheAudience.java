@@ -16,7 +16,7 @@ public class askTheAudience {
 
 	    // Simulate audience votes
 	    Random random = new Random();
-	    int correctAnswerPercentage = random.nextInt(31) + 50; // Correct answer gets 51% to 100%
+	    int correctAnswerPercentage = random.nextInt(31) + 50; // Correct answer gets 50% to 81%
 	    int remainingPercentage = 100 - correctAnswerPercentage;
 	    // Generate percentages for incorrect options
 	    int option1 = random.nextInt(remainingPercentage - 2); // Ensure at least 2% left for others
